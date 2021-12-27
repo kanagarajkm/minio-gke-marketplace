@@ -23,16 +23,24 @@ x-google-marketplace:
   images:
     '':
       properties:
+        imageFull:
+          type: FULL
         imageRepo: 
           type: REPO_WITH_REGISTRY
         imageTag:
           type: TAG
+    operator:
+      properties:
+        imageOperatorlFull:
+          type: FULL 
     console:
       properties:
-        imageConsoleRepo:
-          type: REPO_WITH_REGISTRY
-        imageConsoleTag:
-          type: TAG
+        imageConsoleFull:
+          type: FULL
+    billing:
+      properties:
+        imageBillingFull:
+          type: FULL
 
 properties:
   name:
@@ -43,6 +51,10 @@ properties:
     type: string
     x-google-marketplace:
       type: NAMESPACE
+  reportingSecret:
+    type: string
+    x-google-marketplace:
+      type: REPORTING_SECRET
       
 required:
 - name
