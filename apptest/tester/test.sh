@@ -1,6 +1,7 @@
 #!/bin/bash
 
-endpoint="http://console.minio-operator.svc.cluster.local"
+namespace=$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace)
+endpoint="http://console.$namespace.svc.cluster.local:9090"
 echo GET $endpoint
 http_status_code=$(curl -o /dev/null -s -w "%{http_code}\n" $endpoint)
 echo "Expected http status code: 200"

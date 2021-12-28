@@ -15,8 +15,8 @@ x-google-marketplace:
       - type: ClusterRole
         rulesType: CUSTOM
         rules:
-          - apiGroups: ['apiextensions.k8s.io', 'rbac.authorization.k8s.io']
-            resources: ['customresourcedefinitions', 'clusterroles', 'clusterrolebindings']
+          - apiGroups: ['apiextensions.k8s.io', 'rbac.authorization.k8s.io', 'app.k8s.io']
+            resources: ['customresourcedefinitions', 'clusterroles', 'clusterrolebindings', 'applications']
             verbs: ['*']
 
   # The images property will be filled in during part 2
