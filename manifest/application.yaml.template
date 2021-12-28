@@ -4,18 +4,17 @@ metadata:
   name: "$name"
   namespace: "$namespace"
   annotations:
-    marketplace.cloud.google.com/deploy-info: '{"partner_id": "partner", "product_id": "nginx", "partner_name": "Partner"}'
+    marketplace.cloud.google.com/deploy-info: '{"partner_id": "minio-io", "product_id": "minio", "partner_name": "MinIO"}'
   labels:
     app.kubernetes.io/name: "$name"
 spec:
   descriptor:
-    type: minio-operator
+    type: minio
     version: '4.3.7'
   selector:
     matchLabels:
       app.kubernetes.io/name: "$name"
   componentKinds:
-  # The group is determined from the apiVersion: $GROUP_NAME/$VERSION
   - group: apps
     kind: Deployment
   - group: ''

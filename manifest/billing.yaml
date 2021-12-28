@@ -61,7 +61,6 @@ spec:
           value: "minio-cluster"
         name: minio-operator-billing
         image: "$imageBillingFull"
-        # image: gcr.io/minio-inc-public/minio/billing:4.3.7
         command: []
       restartPolicy: Always
 
